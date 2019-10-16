@@ -7,7 +7,12 @@ interface CoverProps {
   space?: string;
 };
 
-const Cover = styled.div<CoverProps>`
+export default styled.div.attrs(() => ({
+  centered: 'h1',
+  minHeight: '100vh',
+  noPad: false,
+  space: 'var(--s1)',
+}))<CoverProps>`
   display: flex;
   flex-direction: column;
   min-height: ${props => props.minHeight};
@@ -31,12 +36,3 @@ const Cover = styled.div<CoverProps>`
     margin-bottom: auto;
   }
 `;
-
-Cover.defaultProps = {
-  centered: 'h1',
-  minHeight: '100vh',
-  noPad: false,
-  space: 'var(--s1)',
-};
-
-export default Cover;

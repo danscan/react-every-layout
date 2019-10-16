@@ -6,7 +6,11 @@ interface BoxProps {
   readonly padding?: string;
 };
 
-const Box = styled.div<BoxProps>`
+export default styled.div.attrs(() => ({
+  borderWidth: 'var(--border-thin)',
+  invert: false,
+  padding: 'var(--s1)',
+}))<Partial<BoxProps>>`
   ${props => props.invert ? `
     background-color: var(--color-light);
     filter: invert(100%);` : ''}
@@ -21,11 +25,3 @@ const Box = styled.div<BoxProps>`
   outline: var(--border-thin) solid transparent;
   outline-offset: calc(var(--border-thin) * -1);
 `;
-
-Box.defaultProps = {
-  borderWidth: 'var(--border-thin)',
-  invert: false,
-  padding: 'var(--s1)',
-};
-
-export default Box;

@@ -10,7 +10,14 @@ interface SidebarProps {
   readonly wrapReverse?: boolean;
 };
 
-const Sidebar = styled.div<SidebarProps>`
+export default styled.div.attrs(() => ({
+  contentMin: '50%',
+  noStretch: false,
+  side: 'left',
+  sideWidth: '25%',
+  space: 'var(--s1)',
+  wrapReverse: false,
+}))<SidebarProps>`
   overflow: hidden;
 
   > * {
@@ -32,14 +39,3 @@ const Sidebar = styled.div<SidebarProps>`
     min-width: calc(${props => props.contentMin} - ${props => selectSpace(props.space)});
   }
 `;
-
-Sidebar.defaultProps = {
-  contentMin: '50%',
-  noStretch: false,
-  side: 'left',
-  sideWidth: '25%',
-  space: 'var(--s1)',
-  wrapReverse: false,
-};
-
-export default Sidebar;

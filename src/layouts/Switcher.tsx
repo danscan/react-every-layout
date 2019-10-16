@@ -2,12 +2,16 @@ import styled from 'styled-components';
 import selectSpace from '../utils/selectSpace';
 
 interface SwitcherProps {
-  readonly limit: number;
+  readonly limit?: number;
   readonly space?: string;
   readonly threshold?: string;
 };
 
-const Switcher = styled.div<SwitcherProps>`
+export default styled.div.attrs(() => ({
+  limit: 4,
+  space: 'var(--s1)',
+  threshold: 'var(--measure)',
+}))<SwitcherProps>`
   display: block;
 
   > * {
@@ -28,11 +32,3 @@ const Switcher = styled.div<SwitcherProps>`
     flex-basis: 100%;
   }
 `;
-
-Switcher.defaultProps = {
-  limit: 4,
-  space: 'var(--s1)',
-  threshold: 'var(--measure)',
-};
-
-export default Switcher;

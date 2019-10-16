@@ -7,7 +7,12 @@ interface CenterProps {
   readonly max?: string;
 };
 
-const Center = styled.div<CenterProps>`
+export default styled.div.attrs(() => ({
+  andText: false,
+  gutters: 0,
+  intrinsic: false,
+  max: 'var(--measure)',
+}))<CenterProps>`
   box-sizing: content-box;
   display: block;
   margin-left: auto;
@@ -27,12 +32,3 @@ const Center = styled.div<CenterProps>`
 
   ${props => props.andText ? `text-align: center;` : ''}
 `;
-
-Center.defaultProps = {
-  andText: false,
-  gutters: 0,
-  intrinsic: false,
-  max: 'var(--measure)',
-};
-
-export default Center;

@@ -5,7 +5,10 @@ interface GridProps {
   readonly space?: string;
 };
 
-const Grid = styled.div<GridProps>`
+export default styled.div.attrs(() => ({
+  min: '250px',
+  space: 'var(--s0)',
+}))<GridProps>`
   align-content: start;
   display: grid;
   grid-gap: ${props => props.space};
@@ -16,10 +19,3 @@ const Grid = styled.div<GridProps>`
     grid-template-columns: repeat(auto-fill, minmax(min(${props => props.min}, 100%), 1fr));
   }
 `;
-
-Grid.defaultProps = {
-  min: '250px',
-  space: 'var(--s0)',
-};
-
-export default Grid;

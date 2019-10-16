@@ -6,7 +6,9 @@ interface FrameProps {
   readonly ratio?: string;
 };
 
-const Frame = styled.div<FrameProps>`
+export default styled.div.attrs(() => ({
+  ratio: '6:9',
+}))<FrameProps>`
   display: block;
   padding-bottom: ${({ ratio }) => {
     const [ratioNumerator, ratioDenominator] = selectRatioArray(ratio);
@@ -39,9 +41,3 @@ function selectRatioArray(ratio: string): RatioArray {
   
   return [ratioParts[0], ratioParts[1]];
 }
-
-Frame.defaultProps = {
-  ratio: '6:9',
-};
-
-export default Frame;

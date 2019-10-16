@@ -6,7 +6,10 @@ interface StackProps {
   readonly space?: string;
 };
 
-const Stack = styled.div<StackProps>`
+export default styled.div.attrs(() => ({
+  recursive: false,
+  space: 'var(--s1)',
+}))<StackProps>`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -21,10 +24,3 @@ const Stack = styled.div<StackProps>`
     }`
     : ''}
 `;
-
-Stack.defaultProps = {
-  recursive: false,
-  space: 'var(--s1)',
-};
-
-export default Stack;
