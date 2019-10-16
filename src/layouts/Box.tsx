@@ -6,10 +6,11 @@ interface BoxProps {
   readonly padding?: string;
 };
 
-export default styled.div.attrs(() => ({
+export default styled.div.attrs(props => ({
   borderWidth: 'var(--border-thin)',
   invert: false,
   padding: 'var(--s1)',
+  ...props,
 }))<Partial<BoxProps>>`
   ${props => props.invert ? `
     background-color: var(--color-light);

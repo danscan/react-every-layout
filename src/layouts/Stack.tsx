@@ -6,9 +6,10 @@ interface StackProps {
   readonly space?: string;
 };
 
-export default styled.div.attrs(() => ({
+export default styled.div.attrs(props => ({
   recursive: false,
   space: 'var(--s1)',
+  ...props,
 }))<StackProps>`
   display: flex;
   flex-direction: column;

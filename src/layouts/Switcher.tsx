@@ -7,10 +7,11 @@ interface SwitcherProps {
   readonly threshold?: string;
 };
 
-export default styled.div.attrs(() => ({
+export default styled.div.attrs(props => ({
   limit: 4,
   space: 'var(--s1)',
   threshold: 'var(--measure)',
+  ...props,
 }))<SwitcherProps>`
   display: block;
 

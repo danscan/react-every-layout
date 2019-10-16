@@ -7,11 +7,12 @@ interface CenterProps {
   readonly max?: string;
 };
 
-export default styled.div.attrs(() => ({
+export default styled.div.attrs(props => ({
   andText: false,
   gutters: 0,
   intrinsic: false,
   max: 'var(--measure)',
+  ...props,
 }))<CenterProps>`
   box-sizing: content-box;
   display: block;

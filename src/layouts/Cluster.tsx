@@ -6,10 +6,11 @@ interface ClusterProps {
   readonly space?: string;
 };
 
-export default styled.div.attrs(() => ({
+export default styled.div.attrs(props => ({
   align: 'center',
   justify: 'flex-start',
   space: 'var(--s1)',
+  ...props,
 }))<ClusterProps>`
   > * {
     align-items: ${props => props.align};

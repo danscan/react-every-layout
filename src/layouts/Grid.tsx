@@ -5,9 +5,10 @@ interface GridProps {
   readonly space?: string;
 };
 
-export default styled.div.attrs(() => ({
+export default styled.div.attrs(props => ({
   min: '250px',
   space: 'var(--s0)',
+  ...props,
 }))<GridProps>`
   align-content: start;
   display: grid;

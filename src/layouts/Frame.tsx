@@ -6,8 +6,9 @@ interface FrameProps {
   readonly ratio?: string;
 };
 
-export default styled.div.attrs(() => ({
+export default styled.div.attrs(props => ({
   ratio: '6:9',
+  ...props,
 }))<FrameProps>`
   display: block;
   padding-bottom: ${({ ratio }) => {

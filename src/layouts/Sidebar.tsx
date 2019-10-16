@@ -10,13 +10,14 @@ interface SidebarProps {
   readonly wrapReverse?: boolean;
 };
 
-export default styled.div.attrs(() => ({
+export default styled.div.attrs(props => ({
   contentMin: '50%',
   noStretch: false,
   side: 'left',
   sideWidth: '25%',
   space: 'var(--s1)',
   wrapReverse: false,
+  ...props,
 }))<SidebarProps>`
   overflow: hidden;
 

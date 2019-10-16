@@ -7,11 +7,12 @@ interface CoverProps {
   space?: string;
 };
 
-export default styled.div.attrs(() => ({
+export default styled.div.attrs(props => ({
   centered: 'h1',
   minHeight: '100vh',
   noPad: false,
   space: 'var(--s1)',
+  ...props,
 }))<CoverProps>`
   display: flex;
   flex-direction: column;
