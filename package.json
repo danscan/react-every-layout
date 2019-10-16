@@ -5,9 +5,7 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.6.4",
-    "@storybook/addon-actions": "^5.2.4",
     "@storybook/addon-info": "^5.2.4",
-    "@storybook/addon-links": "^5.2.4",
     "@storybook/addons": "^5.2.4",
     "@storybook/react": "^5.2.4",
     "@types/jest": "^24.0.19",
@@ -19,8 +17,11 @@
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6",
     "jest": "^24.9.0",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
     "ts-jest": "^24.1.0",
-    "typescript": "^3.6.4"
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.2"
   },
   "dependencies": {
     "react-resize-observer-hook": "^0.0.2",
@@ -29,5 +30,9 @@
   "scripts": {
     "storybook": "start-storybook -p 6006 -c .storybook",
     "build-storybook": "build-storybook"
+  },
+  "peerDependencies": {
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
   }
 }
