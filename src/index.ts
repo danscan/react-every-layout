@@ -4,6 +4,7 @@ import Cluster from './layouts/Cluster';
 import Cover from './layouts/Cover';
 import Frame from './layouts/Frame';
 import Grid from './layouts/Grid';
+import Reel from './layouts/Reel';
 import Sidebar from './layouts/Sidebar';
 import Stack from './layouts/Stack';
 import Switcher from './layouts/Switcher';
@@ -15,6 +16,7 @@ export {
   Cover,
   Frame,
   Grid,
+  Reel,
   Sidebar,
   Stack,
   Switcher,
