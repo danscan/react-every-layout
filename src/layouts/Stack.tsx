@@ -1,16 +1,24 @@
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { InferPropTypes } from '../types';
 
-interface StackProps {
-  readonly recursive?: boolean;
-  readonly splitAfter?: number;
-  readonly space?: string;
+const StackPropTypes = {
+  recursive: PropTypes.bool,
+  splitAfter: PropTypes.number,
+  space: PropTypes.string,
 };
 
-export default styled.div.attrs(props => ({
+const StackDefaultProps = {
   recursive: false,
   space: 'var(--s1)',
-  ...props,
-}))<StackProps>`
+};
+
+type StackProps = InferPropTypes<
+  typeof StackPropTypes,
+  typeof StackDefaultProps
+>;
+
+const Stack = styled.div<StackProps>`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -25,3 +33,8 @@ export default styled.div.attrs(props => ({
     }`
     : ''}
 `;
+
+Stack.propTypes = StackPropTypes;
+Stack.defaultProps = StackDefaultProps;
+
+export default Stack;

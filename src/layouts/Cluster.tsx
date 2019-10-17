@@ -1,17 +1,25 @@
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { InferPropTypes } from '../types';
 
-interface ClusterProps {
-  readonly align?: string;
-  readonly justify?: string;
-  readonly space?: string;
+const ClusterPropTypes = {
+  align: PropTypes.string,
+  justify: PropTypes.string,
+  space: PropTypes.string,
 };
 
-export default styled.div.attrs(props => ({
+const ClusterDefaultProps = {
   align: 'center',
   justify: 'flex-start',
   space: 'var(--s1)',
-  ...props,
-}))<ClusterProps>`
+};
+
+type ClusterProps = InferPropTypes<
+  typeof ClusterPropTypes,
+  typeof ClusterDefaultProps
+>;
+
+const Cluster = styled.div<ClusterProps>`
   > * {
     align-items: ${props => props.align};
     display: flex;
@@ -24,3 +32,8 @@ export default styled.div.attrs(props => ({
     margin: calc(${props => props.space} / 2);
   }
 `;
+
+Cluster.propTypes = ClusterPropTypes;
+Cluster.defaultProps = ClusterDefaultProps;
+
+export default Cluster;

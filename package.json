@@ -18,12 +18,14 @@
     "babel-loader": "^8.0.6",
     "jest": "^24.9.0",
     "react": "^16.8.3",
+    "react-docgen-typescript-loader": "^3.3.0",
     "react-dom": "^16.8.3",
     "ts-jest": "^24.1.0",
     "typescript": "^3.6.4",
     "webpack": "^4.41.2"
   },
   "dependencies": {
+    "prop-types": "^15.7.2",
     "react-resize-observer-hook": "^0.0.2",
     "styled-components": "^4.4.0"
   },

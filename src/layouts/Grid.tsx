@@ -1,15 +1,23 @@
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { InferPropTypes } from '../types';
 
-interface GridProps {
-  readonly min?: string;
-  readonly space?: string;
+const GridPropTypes = {
+  min: PropTypes.string,
+  space: PropTypes.string,
 };
 
-export default styled.div.attrs(props => ({
+const GridDefaultProps = {
   min: '250px',
   space: 'var(--s0)',
-  ...props,
-}))<GridProps>`
+};
+
+type GridProps = InferPropTypes<
+  typeof GridPropTypes,
+  typeof GridDefaultProps
+>;
+
+const Grid = styled.div<GridProps>`
   align-content: start;
   display: grid;
   grid-gap: ${props => props.space};
@@ -20,3 +28,8 @@ export default styled.div.attrs(props => ({
     grid-template-columns: repeat(auto-fill, minmax(min(${props => props.min}, 100%), 1fr));
   }
 `;
+
+Grid.propTypes = GridPropTypes;
+Grid.defaultProps = GridDefaultProps;
+
+export default Grid;

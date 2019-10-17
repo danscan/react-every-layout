@@ -3,6 +3,7 @@ module.exports = ({ config }) => {
 		test: /\.tsx?$/,
 		use: [
 			{ loader: require.resolve("awesome-typescript-loader") },
+			{ loader: require.resolve('react-docgen-typescript-loader') },
 		],
 	});
 

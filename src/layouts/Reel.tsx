@@ -1,15 +1,31 @@
-import React, { useRef, useState, ReactNode } from 'react';
-import styled, { css } from 'styled-components';
+import PropTypes from 'prop-types';
+import React, { useRef, useState } from 'react';
 import useResize from 'react-resize-observer-hook';
+import styled, { css } from 'styled-components';
+import { InferPropTypes } from '../types';
 
-interface ReelProps {
-  readonly height?: string;
-  readonly itemWidth?: string;
-  readonly overflowing?: boolean;
-  readonly space?: string;
-  readonly thumbColor?: string;
-  readonly trackColor?: string;
+const ReelPropTypes = {
+  height: PropTypes.string,
+  itemWidth: PropTypes.string,
+  overflowing: PropTypes.bool,
+  space: PropTypes.string,
+  thumbColor: PropTypes.string,
+  trackColor: PropTypes.string,
 };
+
+const ReelDefaultProps = {
+  itemWidth: 'auto',
+  overflowing: false,
+  space: '1rem',
+  height: 'auto',
+  trackColor: '#000',
+  thumbColor: '#fff',
+};
+
+type ReelProps = InferPropTypes<
+  typeof ReelPropTypes,
+  typeof ReelDefaultProps
+>;
 
 const StyledReel = styled.div<ReelProps>`
   display: flex;
@@ -72,13 +88,7 @@ const Reel: React.FC<ReelProps> & {defaultProps: Partial<ReelProps>} = (props) =
   );
 };
 
-Reel.defaultProps = {
-  itemWidth: 'auto',
-  overflowing: false,
-  space: '1rem',
-  height: 'auto',
-  trackColor: '#000',
-  thumbColor: '#fff',
-};
+Reel.propTypes = ReelPropTypes;
+Reel.defaultProps = ReelDefaultProps;
 
 export default Reel;

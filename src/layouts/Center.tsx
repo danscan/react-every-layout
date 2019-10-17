@@ -1,19 +1,27 @@
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { InferPropTypes } from '../types';
 
-interface CenterProps {
-  readonly andText?: boolean;
-  readonly gutters?: number;
-  readonly intrinsic?: boolean;
-  readonly max?: string;
-};
+const CenterPropTypes = {
+  andText: PropTypes.bool,
+  gutters: PropTypes.number,
+  intrinsic: PropTypes.bool,
+  max: PropTypes.string,
+}
 
-export default styled.div.attrs(props => ({
+const CenterDefaultProps = {
   andText: false,
   gutters: 0,
   intrinsic: false,
   max: 'var(--measure)',
-  ...props,
-}))<CenterProps>`
+};
+
+type CenterProps = InferPropTypes<
+  typeof CenterPropTypes,
+  typeof CenterDefaultProps
+>;
+
+const Center = styled.div<CenterProps>`
   box-sizing: content-box;
   display: block;
   margin-left: auto;
@@ -33,3 +41,8 @@ export default styled.div.attrs(props => ({
 
   ${props => props.andText ? `text-align: center;` : ''}
 `;
+
+Center.propTypes = CenterPropTypes;
+Center.defaultProps = CenterDefaultProps;
+
+export default Center;

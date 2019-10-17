@@ -1,15 +1,21 @@
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { InferPropTypes } from '../types';
 
-type RatioArray = [string, string];
-
-interface FrameProps {
-  readonly ratio?: string;
+const FramePropTypes = {
+  ratio: PropTypes.string.isRequired,
 };
 
-export default styled.div.attrs(props => ({
+const FrameDefaultProps = {
   ratio: '6:9',
-  ...props,
-}))<FrameProps>`
+};
+
+type FrameProps = InferPropTypes<
+  typeof FramePropTypes,
+  typeof FrameDefaultProps
+>;
+
+const Frame = styled.div<FrameProps>`
   display: block;
   padding-bottom: ${({ ratio }) => {
     const [ratioNumerator, ratioDenominator] = selectRatioArray(ratio);
@@ -37,8 +43,15 @@ export default styled.div.attrs(props => ({
   }
 `;
 
+type RatioArray = [string, string];
+
 function selectRatioArray(ratio: string): RatioArray {
   const ratioParts = ratio.split(':', 2);
   
   return [ratioParts[0], ratioParts[1]];
 }
+
+Frame.propTypes = FramePropTypes;
+Frame.defaultProps = FrameDefaultProps;
+
+export default Frame;

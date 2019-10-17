@@ -1,19 +1,27 @@
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { InferPropTypes } from '../types';
 
-interface CoverProps {
-  centered?: string;
-  minHeight?: string;
-  noPad?: boolean;
-  space?: string;
+const CoverPropTypes = {
+  centered: PropTypes.string,
+  minHeight: PropTypes.string,
+  noPad: PropTypes.bool,
+  space: PropTypes.string,
 };
 
-export default styled.div.attrs(props => ({
+const CoverDefaultProps = {
   centered: 'h1',
   minHeight: '100vh',
   noPad: false,
   space: 'var(--s1)',
-  ...props,
-}))<CoverProps>`
+};
+
+type CoverProps = InferPropTypes<
+  typeof CoverPropTypes,
+  typeof CoverDefaultProps
+>;
+
+const Cover = styled.div<CoverProps>`
   display: flex;
   flex-direction: column;
   min-height: ${props => props.minHeight};
@@ -37,3 +45,8 @@ export default styled.div.attrs(props => ({
     margin-bottom: auto;
   }
 `;
+
+Cover.propTypes = CoverPropTypes;
+Cover.defaultProps = CoverDefaultProps;
+
+export default Cover;
