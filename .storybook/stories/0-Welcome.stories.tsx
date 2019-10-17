@@ -32,22 +32,7 @@ export const baseCss = () => (
 * {
   box-sizing: border-box;
 }
-
-a {
-  color: #177366;
-}
-
-/* Common Classes */
-.measure-section {
-  max-width: var(--measure);
-  padding-left: var(--s2);
-  padding-right: var(--s2);
-}
-
-.font-piek {
-  font-family: "Piek";
-  font-size: 0.8em;
-}`}
+`}
     </pre>
   </div>
 );
