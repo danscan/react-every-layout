@@ -34,7 +34,9 @@
   "scripts": {
     "storybook": "start-storybook -p 6006 -c .storybook",
     "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages"
+    "deploy-storybook": "storybook-to-ghpages",
+    "build": "tsc",
+    "prepublish": "yarn build"
   },
   "peerDependencies": {
     "react": "^16.8.3",
