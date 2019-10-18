@@ -21,6 +21,7 @@
 	"include": [
 		"./storybook/**/*.ts",
 		"./storybook/**/*.tsx",
+		"./src/*.ts",
 		"./src/**/*.ts",
 		"./src/**/*.tsx"
 	],
