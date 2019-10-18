@@ -1,7 +1,8 @@
 {
   "name": "react-every-layout",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.6.4",
