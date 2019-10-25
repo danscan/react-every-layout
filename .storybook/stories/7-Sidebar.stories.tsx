@@ -6,7 +6,7 @@ export default {
 };
 
 export const boxSidebar = () => (
-  <Sidebar>
+  <Sidebar sideWidth="12rem" contentMin="60%">
     <div>
       <Box borderWidth="1px">
         Side
