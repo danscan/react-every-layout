@@ -4,7 +4,7 @@ import { InferPropTypes } from '../types';
 
 const CenterPropTypes = {
   andText: PropTypes.bool,
-  gutters: PropTypes.number,
+  gutters: PropTypes.string,
   intrinsic: PropTypes.bool,
   max: PropTypes.string,
 }
