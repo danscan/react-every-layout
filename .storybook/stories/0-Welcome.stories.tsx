@@ -11,7 +11,6 @@ export const baseCss = () => (
     <p>For example, here's the CSS file used in this Storybook</p>
     <pre>
 {`:root {
-  --borderThin: 2px;
   --measure: 70ch;
   --ratio: 1.5;
   --s-5: calc(var(--s-4) / var(--ratio));

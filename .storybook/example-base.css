@@ -1,5 +1,4 @@
 :root {
-  --borderThin: 2px;
   --measure: 70ch;
   --ratio: 1.5;
   --s-5: calc(var(--s-4) / var(--ratio));
