@@ -11,7 +11,7 @@ const CenterPropTypes = {
 
 const CenterDefaultProps = {
   andText: false,
-  gutters: 0,
+  gutters: '0',
   intrinsic: false,
   max: 'var(--measure)',
 };
