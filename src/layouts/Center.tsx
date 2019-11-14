@@ -27,6 +27,7 @@ const Center = styled.div<CenterProps>`
   margin-left: auto;
   margin-right: auto;
   max-width: ${props => props.max};
+  width: 100%;
 
   ${props => props.intrinsic ? `
     align-items: center;
