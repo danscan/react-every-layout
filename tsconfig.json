@@ -3,7 +3,7 @@
 		"outDir": "./lib",
 		"jsx": "react",
 		"rootDirs": ["src", ".storybook"],
-		"module":"es6",
+		"module":"commonjs",
 		"moduleResolution": "node",
 		"target": "es2015",
 		"types": [],
