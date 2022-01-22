@@ -1,0 +1,13 @@
+// import "sanitize.css";
+// import "the-new-css-reset";
+
+export const parameters = {
+  actions: { argTypesRegex: "^on[A-Z].*" },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
+    },
+    expanded: true,
+  },
+};

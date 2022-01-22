@@ -1,25 +1,12 @@
-import Box from './layouts/Box';
-import Center from './layouts/Center';
-import Cluster from './layouts/Cluster';
-import Cover from './layouts/Cover';
-import Frame from './layouts/Frame';
-import Grid from './layouts/Grid';
-import Imposter from './layouts/Imposter';
-import Reel from './layouts/Reel';
-import Sidebar from './layouts/Sidebar';
-import Stack from './layouts/Stack';
-import Switcher from './layouts/Switcher';
-
-export {
-  Box,
-  Center,
-  Cluster,
-  Cover,
-  Frame,
-  Grid,
-  Imposter,
-  Reel,
-  Sidebar,
-  Stack,
-  Switcher,
-};
+export { Box } from "./layouts/Box/Box";
+export { Center } from "./layouts/Center/Center";
+export { Cluster } from "./layouts/Cluster/Cluster";
+export { Cover } from "./layouts/Cover/Cover";
+export { Frame } from "./layouts/Frame/Frame";
+export { Grid } from "./layouts/Grid/Grid";
+export { Icon } from "./layouts/IconComponent/Icon";
+export { Imposter } from "./layouts/Imposter/Imposter";
+export { Reel } from "./layouts/Reel/Reel";
+export { Sidebar } from "./layouts/Sidebar/Sidebar";
+export { Stack } from "./layouts/Stack/Stack";
+export { Switcher } from "./layouts/Switcher/Switcher";

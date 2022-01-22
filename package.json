@@ -1,45 +1,51 @@
 {
   "name": "react-every-layout",
-  "version": "1.1.6",
+  "version": "2.0.0",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@storybook/addon-info": "^5.2.4",
-    "@storybook/addons": "^5.2.4",
-    "@storybook/react": "^5.2.4",
-    "@storybook/storybook-deployer": "^2.8.1",
-    "@types/jest": "^24.0.19",
-    "@types/node": "^12.11.1",
-    "@types/react": "^16.9.5",
-    "@types/react-dom": "^16.9.1",
-    "@types/storybook__react": "^4.0.2",
-    "@types/styled-components": "^4.1.19",
-    "awesome-typescript-loader": "^5.2.1",
-    "babel-loader": "^8.0.6",
-    "jest": "^24.9.0",
-    "react": "^16.8.3",
-    "react-docgen-typescript-loader": "^3.3.0",
-    "react-dom": "^16.8.3",
-    "ts-jest": "^24.1.0",
-    "typescript": "^3.6.4",
-    "webpack": "^4.41.3"
-  },
-  "dependencies": {
-    "prop-types": "^15.7.2",
-    "react-resize-observer-hook": "^0.0.2",
-    "styled-components": "^4.4.0"
+    "@babel/core": "^7.17.5",
+    "@linaria/babel-preset": "^3.0.0-beta.17",
+    "@linaria/shaker": "^3.0.0-beta.17",
+    "@linaria/webpack-loader": "^3.0.0-beta.16",
+    "@mdx-js/react": "^1.6.22",
+    "@storybook/addon-actions": "^6.4.19",
+    "@storybook/addon-docs": "^6.4.19",
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/addon-links": "^6.4.19",
+    "@storybook/builder-webpack5": "^6.4.19",
+    "@storybook/manager-webpack5": "^6.4.19",
+    "@storybook/react": "^6.4.19",
+    "@storybook/storybook-deployer": "^2.8.10",
+    "@svgr/webpack": "^6.2.1",
+    "@types/react": "^17.0.40",
+    "@types/react-dom": "17.0.13",
+    "@types/styled-components": "^5.1.24",
+    "@yarnpkg/sdks": "^2.6.0",
+    "babel-loader": "^8.2.3",
+    "csstype": "^3.0.11",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.6.2",
+    "webpack": "^5.70.0"
   },
   "scripts": {
-    "storybook": "start-storybook -p 6006 -c .storybook",
+    "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "build": "tsc",
     "prepublish": "yarn build"
   },
   "peerDependencies": {
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3"
+    "react": "*",
+    "react-dom": "*"
+  },
+  "dependencies": {
+    "@linaria/core": "^3.0.0-beta.15",
+    "@linaria/react": "^3.0.0-beta.15",
+    "sanitize.css": "^13.0.0",
+    "styled-components": "^5.3.3",
+    "the-new-css-reset": "^1.5.1"
   }
 }
