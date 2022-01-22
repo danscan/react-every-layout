@@ -1,31 +1,37 @@
 {
-	"compilerOptions": {
-		"outDir": "./lib",
-		"jsx": "react",
-		"rootDirs": ["src", ".storybook"],
-		"module":"es6",
-		"moduleResolution": "node",
-		"target": "es2015",
-		"types": [],
-		"noImplicitReturns": true,
-		"noImplicitThis": true,
-		"noImplicitAny": true,
-		"strictNullChecks": true,
-		"declaration": true,
-		"removeComments": true,
-		"sourceMap": true,
-		"allowSyntheticDefaultImports": true,
-		"experimentalDecorators": true,
-		"emitDecoratorMetadata": true
-	},
-	"include": [
-		"./storybook/**/*.ts",
-		"./storybook/**/*.tsx",
-		"./src/*.ts",
-		"./src/**/*.ts",
-		"./src/**/*.tsx"
-	],
-	"exclude": [
-		"node_modules"
-	]
+  "compilerOptions": {
+    "outDir": "./lib",
+    "jsx": "react-jsx",
+    "rootDirs": ["src", ".storybook"],
+    "module": "ES2015",
+    "moduleResolution": "node",
+    "target": "ESNext",
+    "types": [],
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "declaration": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noErrorTruncation": true,
+    "strictBindCallApply": true,
+    "typeRoots": [
+      "types",
+      "node_modules/@types"
+    ]
+  },
+  "include": [
+    "./storybook/**/*.ts",
+    "./storybook/**/*.tsx",
+    "./src/*.ts",
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
