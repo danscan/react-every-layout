@@ -4,6 +4,11 @@
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "license": "MIT",
+  "packageManager": "yarn@3.2.0",
+  "engines": {
+    "node": "^16.14.0",
+    "npm": "please_use_yarn_instead"
+  },
   "devDependencies": {
     "@babel/core": "^7.17.5",
     "@linaria/babel-preset": "^3.0.0-beta.17",
@@ -35,6 +40,7 @@
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
     "build": "tsc",
+    "preinstall": "npx -y only-allow yarn",
     "prepublish": "yarn build"
   },
   "peerDependencies": {
